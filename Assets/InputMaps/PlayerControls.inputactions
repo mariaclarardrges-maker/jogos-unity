@@ -1,9 +1,9 @@
 {
     "version": 1,
-    "name": "Player",
+    "name": "PlayerControls",
     "maps": [
         {
-            "name": "Player",
+            "name": "Movement",
             "id": "91326105-c90b-4237-9344-7807d6bbd27d",
             "actions": [
                 {
@@ -23,20 +23,27 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Sprint",
+                    "type": "Button",
+                    "id": "e18e441e-1bb3-44a3-b122-e9aec53260a1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "d81204c9-0aad-4a45-9475-b85a77d2db08",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "9505fe26-6933-41e1-b7c8-a4445672ffd2",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "2D Vector",
                     "id": "db97ff9e-1e9d-4af2-b88b-dd62e0b9b3ca",
@@ -51,7 +58,7 @@
                 {
                     "name": "up",
                     "id": "ec0be236-cdf3-4f0b-98a8-5a80af56509a",
-                    "path": "<Keyboard>/w",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -62,7 +69,7 @@
                 {
                     "name": "down",
                     "id": "816d24bf-9747-40d9-92b8-87f8adfcbea8",
-                    "path": "<Keyboard>/s",
+                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -73,7 +80,7 @@
                 {
                     "name": "left",
                     "id": "e932a8cc-0b24-4404-ab12-dbcd4e8b8648",
-                    "path": "<Keyboard>/a",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -84,7 +91,7 @@
                 {
                     "name": "right",
                     "id": "8cf5cd85-4707-4cb0-8b28-f1a7ad22a72e",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -105,12 +112,23 @@
                 },
                 {
                     "name": "",
-                    "id": "01cfd0b2-ae56-4e6b-b2ec-4050767b2536",
-                    "path": "<Gamepad>/buttonSouth",
+                    "id": "ea8e4b2f-bdc1-4919-bf4b-b33b073c2da0",
+                    "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump",
+                    "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "88d928f1-a90a-49f7-9958-d7e434711535",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
